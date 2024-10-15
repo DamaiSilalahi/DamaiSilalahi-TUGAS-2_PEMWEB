@@ -1,0 +1,146 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: linear-gradient(135deg, #e1f5fe 0%, #bbdefb 100%); /* Gradasi latar belakang */
+    transition: all 0.5s ease-in-out;
+}
+
+.header {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 10px;
+    padding-top: 0; 
+    margin-top: 0;
+    color: #0066cc; /* Warna biru khas USU */
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Efek bayangan pada teks */
+}
+
+.heading-line {
+    width: 800px;
+    margin: 5px auto 50px auto;
+    border: 0;
+    border-top: 2px solid #0066cc; /* Garis atas biru */
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 800px;
+    margin: 0 auto;
+}
+
+.form-container {
+    width: 760px;
+    padding: 20px;
+    background-color: #ffffff; /* Latar belakang putih */
+    border: 2px solid #0066cc; /* Garis kotak biru */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Bayangan lebih jelas */
+    border-radius: 8px;
+    transition: width 0.5s ease-in-out;
+}
+
+.result-container {
+    display: none; /* Awalnya tidak ditampilkan */
+    max-width: 100%; 
+    padding: 20px 50px;
+    background-color: #f1f8ff; /* Latar belakang berwarna cerah untuk hasil */
+    border: 2px solid #0066cc; /* Garis kotak biru */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Bayangan untuk kedalaman */
+    border-radius: 10px;
+    margin-right: 1px;
+    margin-top: 30px;
+    text-align: center; 
+    animation: slideInRight 0.5s ease; /* Menambahkan animasi saat muncul */
+}
+
+/* Animasi untuk tampil dari kanan */
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%); /* Mulai dari luar layar ke kanan */
+        opacity: 0; /* Transparan pada awal */
+    }
+    to {
+        transform: translateX(0); /* Ke posisi normal */
+        opacity: 1; /* Menjadi sepenuhnya terlihat */
+    }
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #333;
+}
+
+input[type="text"],
+input[type="file"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="file"]:focus {
+    background-color: #e6f7ff; /* Latar belakang saat fokus */
+    border-color: #0066cc; /* Border saat fokus */
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #0066cc; /* Warna tombol biru */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 15px auto 0 auto;
+    display: block;
+    width: fit-content;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s; /* Transisi saat hover */
+}
+
+button:hover {
+    background-color: #005bb5; /* Warna tombol saat hover */
+    transform: translateY(-2px); /* Efek sedikit mengangkat tombol saat hover */
+}
+
+.result-container img {
+    max-width: 80%;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px;
+    border-radius: 10px;
+}
+
+.result-container p {
+    text-align: center;
+    margin: 5px;
+    padding: 0;
+    color: #333;
+}
+
+/* Tambahan efek hover pada form-container */
+.form-container:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); /* Bayangan saat hover */
+    transform: scale(1.02); /* Sedikit memperbesar saat hover */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transisi untuk efek hover */
+}
+
+/* Tambahan untuk mempercantik form input */
+input[type="text"],
+input[type="file"] {
+    transition: border 0.5s, background-color 0.5s; /* Tambahan transisi */
+}
+
+/* Efek hover pada label */
+label:hover {
+    color: #0066cc; /* Mengubah warna label saat hover */
+    text-decoration: underline; /* Menggarisbawahi label saat hover */
+}
